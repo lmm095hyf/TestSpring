@@ -1,0 +1,5 @@
+# Project exclude paths
+/MyTestSpring/target/
+/Spring_1HelloWorld/target/
+/target/
+/Test2/target/
