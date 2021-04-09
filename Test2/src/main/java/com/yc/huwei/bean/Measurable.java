@@ -1,4 +1,4 @@
-package com.huwei.bean;
+package com.yc.huwei.bean;
 
 import org.springframework.stereotype.Component;
 

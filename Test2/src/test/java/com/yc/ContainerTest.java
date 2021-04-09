@@ -1,20 +1,15 @@
-package com;
+package com.yc;
 
-import com.huwei.bean.Container;
-import com.mimi.bean.Person;
-import com.mimi.bean.PersonBmiTool;
-import org.junit.Before;
+import com.yc.huwei.bean.Container;
+import com.yc.mimi.bean.Person;
+import com.yc.mimi.bean.PersonBmiTool;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Random;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfig.class })

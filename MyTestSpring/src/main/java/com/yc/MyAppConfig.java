@@ -1,9 +1,9 @@
 package com.yc;
 
-import com.yc.bean.HelloWorld;
 import com.yc.springframework.stereotype.MyBean;
 import com.yc.springframework.stereotype.MyComponentScan;
 import com.yc.springframework.stereotype.MyConfiguration;
+import com.yc.bean.HelloWorld;
 
 /**
  * @program: TestSpring
@@ -12,7 +12,7 @@ import com.yc.springframework.stereotype.MyConfiguration;
  * @create: 2021-04-05 11:47
  */
 @MyConfiguration
-@MyComponentScan(basePackages = {"com.yc.bean","com.yc.biz"})
+@MyComponentScan(basePackages = {"com.yc.dao","com.yc.biz","com.yc.bean"})
 public class MyAppConfig {
 
     @MyBean

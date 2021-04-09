@@ -1,6 +1,8 @@
 package com.yc;
 
 import com.yc.biz.StudentBizImpl;
+import com.yc.dao.StudentDao;
+import com.yc.dao.StudentDaoJpaImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +20,11 @@ public class AppConfig {
     @Bean
     public StudentBizImpl studentBiz(){
         return new StudentBizImpl();
+    }
+
+    @Bean
+    public StudentDao studentDaoMybatis(){
+        return new StudentDaoJpaImpl();
     }
 
 

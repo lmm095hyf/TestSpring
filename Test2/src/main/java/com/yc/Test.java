@@ -1,10 +1,10 @@
-package com;
+package com.yc;
 
 import java.util.Random;
 
-import com.huwei.bean.Container;
-import com.mimi.bean.Person;
-import com.mimi.bean.PersonBmiTool;
+import com.yc.huwei.bean.Container;
+import com.yc.mimi.bean.Person;
+import com.yc.mimi.bean.PersonBmiTool;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

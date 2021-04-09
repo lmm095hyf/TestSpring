@@ -21,7 +21,7 @@ public class StudentDaoTest extends TestCase {
 //        studentBizImpl.setStudentDao(studentDao);
         ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        studentDao = (StudentDao) ac.getBean("studentDaoJpaImpl");
+        studentDao = (StudentDao) ac.getBean("studentDaoMybatisImpl");
     }
 
 

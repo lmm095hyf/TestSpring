@@ -11,6 +11,7 @@
     <modules>
         <module>Spring_1HelloWorld</module>
         <module>Test2</module>
+        <module>spring4-AOP</module>
     </modules>
 
     <properties>

@@ -1,4 +1,4 @@
-package com.mimi.bean;
+package com.yc.mimi.bean;
 
 import org.springframework.stereotype.Component;
 

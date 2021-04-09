@@ -23,4 +23,10 @@ public class StudentDaoMybatisImpl implements StudentDao{
     public void update(String name) {
         System.out.println("mybatis更新学生："+name);
     }
+
+    @Override
+    public String find(String name) {
+        System.out.println("MyBatis查找"+name);
+        return name;
+    }
 }

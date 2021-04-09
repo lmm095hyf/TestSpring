@@ -1,6 +1,6 @@
-package com.mimi.bean;
+package com.yc.mimi.bean;
 
-import com.huwei.bean.Measurable;
+import com.yc.huwei.bean.Measurable;
 import org.springframework.stereotype.Component;
 
 @Component

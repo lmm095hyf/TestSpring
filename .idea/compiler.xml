@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MyTestSpring" />
+        <module name="spring4-AOP" />
+        <module name="spring3-MyTestSpring" />
         <module name="Spring_1HelloWorld" />
         <module name="Test2" />
       </profile>

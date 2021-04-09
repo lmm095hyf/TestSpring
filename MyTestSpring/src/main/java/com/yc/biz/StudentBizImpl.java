@@ -1,8 +1,9 @@
 package com.yc.biz;
 
 import com.yc.dao.StudentDao;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.yc.springframework.stereotype.MyAutowired;
+import com.yc.springframework.stereotype.MyQualifier;
+import com.yc.springframework.stereotype.MyService;
 
 /**
  * @program: TestSpring
@@ -10,7 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
  * @author: 作者 :林木木
  * @create: 2021-04-04 14:49
  */
-//@Service//给spring的类托管
+@MyService//给spring的类托管
 public class StudentBizImpl {
     private StudentDao studentDao;
 
@@ -25,8 +26,8 @@ public class StudentBizImpl {
         return studentDao;
     }
 
-    @Autowired
-    @Qualifier("studentDaoJpaImpl")
+    @MyAutowired
+    @MyQualifier("studentDaoJpaImpl")
     public void setStudentDao(StudentDao studentDao) {
         this.studentDao = studentDao;
     }
