@@ -13,6 +13,7 @@
         <module>Test2</module>
         <module>spring4-AOP</module>
         <module>spring5_selfaop_jdkproxy</module>
+        <module>spring6_cglib_proxy</module>
     </modules>
 
     <properties>
