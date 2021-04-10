@@ -21,12 +21,6 @@ public class ContainerTest {
     @Autowired
     Container c;
 
-//    @Before
-//    public void setUp() throws Exception {
-//        //ac= new AnnotationConfigApplicationContext(AppConfig.class);
-//        //pbt = (PersonBmiTool) ac.getBean("personBmiTool");
-//        //c= (Container) ac.getBean("container");
-//    }
 
     @Test
     public void save() {
