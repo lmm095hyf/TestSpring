@@ -26,8 +26,8 @@ public class StudentBizImpl{
         return studentDao;
     }
 
-    @Autowired
-    @Qualifier("studentDaoJpaImpl")
+    @Autowired//按照类型注入，如果有多个托管bean，则报错，要不就要加入@Qualifier来约定注入的beanid
+    @Qualifier("studentDaoJpaImpl")//先按照名字注入，再按照类型注入
     public void setStudentDao(StudentDao studentDao) {
         this.studentDao = studentDao;
     }

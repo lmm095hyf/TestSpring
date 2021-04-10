@@ -3,6 +3,7 @@ package com.yc.aspect;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
@@ -16,6 +17,7 @@ import java.util.Date;
  */
 @Aspect  //说明这是切面类
 @Component//注意：要托管给spring
+@Order(value = 100)
 public class LogAspect {
     //切入点声明
     @Pointcut("execution(* com.yc.biz.StudentBizImpl.add(..))")//切入点表达式，哪些方法上加增强 *代表任意修饰符
@@ -33,23 +35,45 @@ public class LogAspect {
 
     }
 
+    //切入点表达式的语法: ?代表出现0次或一次
+    //modifiers-pattern:修饰衔
+    //ret-type-pattern:返回类型
+    //declaring-type-pattern:
+    //name-pattern:名字模型
+    //throws-pattern
+    //execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern)
+    //          throws-pattern?)
+
+
+
     @After("com.yc.aspect.LogAspect.addAndUpdate()")
-    public void bye(JoinPoint jp){
-        System.out.println("===后置增强===");
-        //连接点中的信息
-        Object target=jp.getTarget();
-        System.out.println("目标类"+target);
-        System.out.println("方法："+jp.getSignature());
-        Object[] objs=jp.getArgs();
-        //if(objs.)
-        System.out.println("=====bye=======");
+    public void bye(JoinPoint jp) {//spring是一个ioc容器,它可以使用di将程序运行的信息注入 joinpoint
+        System.out.println("---------------bye---------------");
+        //连接点中的所有信息
+        Object target = jp.getTarget();
+        System.out.println("目标类为:" + target);
+
+        Object method = jp.getSignature();
+        System.out.println("方法:" + method);
+
+        Object[] objs = jp.getArgs();
+
+        if (objs != null) {
+            for (Object o : objs) {
+                System.out.println("参数:" + o);
+            }
+        }
+
+        System.out.println("---------------bye---------------");
     }
 
     @Around("execution(* com.yc.biz.StudentBizImpl.find*(..))")
     public Object compute(ProceedingJoinPoint pjp) throws Throwable {
+        System.out.println("==========compute进入了   增强。。。");
         long start = System.currentTimeMillis();
         Object retVal=pjp.proceed();
         long end=System.currentTimeMillis();
+        System.out.println("==========compute退出增强了。。。");
         System.out.println("时长为"+(end-start));
         return retVal;
     }
