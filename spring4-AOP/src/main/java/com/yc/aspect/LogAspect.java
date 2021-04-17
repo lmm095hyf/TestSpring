@@ -29,7 +29,7 @@ public class LogAspect {
 
     }
 
-    @Pointcut("add()|| update()")//?代表0/1
+    @Pointcut("add()||update()")//?代表0/1
     //modifiers-pattern：修饰符
     private void addAndUpdate(){  //私有化方法，只是为了表明这是一个切入点
 

@@ -12,10 +12,8 @@ import java.util.Date;
  * @create: 2021-04-10 19:21
  */
 public class LogAspect implements InvocationHandler {
-    private Object target;
 
-    public LogAspect() {
-    }
+    private Object target;
 
     public LogAspect(Object target) {
         this.target = target;
